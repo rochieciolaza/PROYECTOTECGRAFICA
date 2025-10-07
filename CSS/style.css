@@ -43,6 +43,10 @@ section h2{
   font-weight: 700;
 }
 .lead{ color: #f0f0f0; }
+a{
+  text-decoration: none;
+  color: var(--ink-2);
+}
 
 /* Navbar fija y siempre por encima de todo */
 .navbar{
@@ -221,3 +225,23 @@ section{ padding: 76px 0; }
 
 /* -------- Helpers de altura para demos (pueden removerse) -------- */
 .h-220{ height: 220px; }
+
+/* video */
+
+.video-container{
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vw * 0.5625 );
+    overflow: hidden;
+}
+
+.video-container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+}

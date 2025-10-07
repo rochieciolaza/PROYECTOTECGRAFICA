@@ -22,6 +22,13 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   -----------------------------------
   NAHUEL AUN DEBE RECOLECTAR LAS FOTOS DE CALIDAD Y LOGOS PARA AGREGAR EN SECCIONES "SERVICIOS" Y "NUESTROS TRABAJOS"
 
+  ----------------------------------
+  falta: 
+  ajustar la velocidad de los numeros
+  buscar logos de clientes
+  ajustar la altura del video para que sea responsive
+  boton de whatsapp en la esquina
+  animacion
 
 -->
 
@@ -46,7 +53,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Hoja de estilos propia (la creamos después) -->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../CSS/style.css">
 
   <style>
     /* Mínimos para visualizar el esqueleto (luego pasamos a styles.css) */
@@ -96,20 +103,24 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 
   <!-- HERO -->
   <header class="hero d-flex align-items-center">
+    <div class="video-container">
+      <video src="../IMG/video.mp4" autoplay loop muted poster="">
+      </video>
+    </div>
     <div class="container text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">
-          <h1 class="display-5 fw-bold">Técnica</h1>
-          <p class="lead mb-4">Programación web y técnica gráfica para marcas que quieren crecer.</p>
-          <div class="d-flex gap-3 justify-content-center">
-            <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
-            <a href="#contacto" class="btn btn-outline-light btn-lg rounded-pill px-4">Contacto</a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!--<img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">-->
+            <h1 class="display-5 fw-bold">Técnica</h1>
+            <p class="lead mb-4">Programación web y técnica gráfica para marcas que quieren crecer.</p>
+            <div class="d-flex gap-3 justify-content-center">
+              <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
+              <a href="#contacto" class="btn btn-outline-light btn-lg rounded-pill px-4">Contacto</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
   <!-- MÉTRICAS -->
   <section class="metrics bg-marmol">
@@ -119,7 +130,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm rounded-4">
             <div class="card-body py-5">
-              <div class="display-6 fw-bold">+3000</div>
+              <div class="display-6 fw-bold">+<span class="num" data-val="3000">0</span></div>
               <p class="mb-0">Carteles entregados</p>
             </div>
           </div>
@@ -127,7 +138,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm rounded-4">
             <div class="card-body py-5">
-              <div class="display-6 fw-bold">+20</div>
+              <div class="display-6 fw-bold">+<span class="num" data-val="20">0</span></div>
               <p class="mb-0">Años de experiencia</p>
             </div>
           </div>
@@ -135,7 +146,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm rounded-4">
             <div class="card-body py-5">
-              <div class="display-6 fw-bold">+150</div>
+              <div class="display-6 fw-bold">+<span class="num" data-val="150">0</span></div>
               <p class="mb-0">Clientes felices</p>
             </div>
           </div>
@@ -266,15 +277,15 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           <ul class="list-unstyled fs-5">
             <li class="d-flex align-items-center gap-3 mb-3">
               <i class="bi bi-envelope fs-3"></i>
-              <span>hola@tecnica.com</span>
+              <span>tecnica-grafica@gmail.com</span>
             </li>
             <li class="d-flex align-items-center gap-3 mb-3">
               <i class="bi bi-telephone fs-3"></i>
-              <span>+54 9 11 0000-0000</span>
+              <span>+54 9 223 478 2881</span>
             </li>
             <li class="d-flex align-items-center gap-3">
               <i class="bi bi-instagram fs-3"></i>
-              <span>@tecnica.estudio</span>
+              <span>@tecnicagrafica</span>
             </li>
           </ul>
         </div>
@@ -295,7 +306,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <!-- FOOTER -->
   <footer class="bg-marmol">
     <div class="container text-center text-muted"> 
-      <div class="small">Este sitio web fue creado por Wequark • © <span id="year"></span> Técnica Grafica</div> <!--TOBI: QUE WEQUARK SEA UN ENLACE A NUESTRA WEB WEQUARK.COM -->
+      <div class="small">Este sitio web fue creado por <a href="https://www.wequark.com">Wequark</a> • © <span id="year"></span> Técnica Grafica</div>
     </div>
   </footer>
 
@@ -309,18 +320,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 </html>
 
 
-<script> // TOBI: MOVEME ESTO A UN ARCHIVO JS Y ASEGURATE Q SIGA FUNCIONANDO
-  const nav = document.querySelector('.navbar');
-  const setBodyOffset = () => {
-    document.body.style.paddingTop = nav.offsetHeight + 'px';
-  };
-  setBodyOffset();
-  window.addEventListener('resize', setBodyOffset);
-
-  // sólido al scrollear (como ya tenías)
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) nav.classList.add('is-stuck');
-    else nav.classList.remove('is-stuck');
-  }, { passive: true });
-</script>
+<script src="../JS/nav.js"></script>
+<script src="../JS/numeros.js"></script>
 
