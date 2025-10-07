@@ -1,0 +1,326 @@
+<!-- NOTAS ENTRE TOBI Y RO
+
+TOBI, CTRL + F Y BUSCA TU NOMBRE (TOBI), REVISA COMENTARIOS QUE TE VOY DEJANDO, SIEMPRE ARRANCO CON TU NOMBRE PARA QUE LOS VEAS DE ESTA MANERA.
+QUIERO QUE ENTRES AL INSTAGRAM DE LA TECNICA @TECNICAGRAFICA , Y RECOPILES INFO QUE VAS A AGREGAR DE LA SIGUIENTE FORMA
+  1) ENTRAR AL IG
+  2) ANOTAR 1 X 1 LOS NOMBRES DE TODOS LOS CLIENTES QUE ELLOS TIENEN 
+  3) BUSCAR EN GOOGLE LOS LOGOS DE DICHOS CLIENTES CON FORMATO PNG (SIN FONDO) Y AGREGAR TODAS LAS MARCAS PRINCIPALES EN LA SECCION DEL CODIGO "NEGOCIOS CON LOS QUE TRABAJAMOS".
+  TE DEJE ESPACIO PARA 10, SI HACEN FALTA + ESPACIOS AGREGALOS. 
+
+  LUEGO
+  4) CAMBIA EL CELULAR Y AGREGA SU IG A LA SECCION DE CONTACTO, TAMBIEN SU DIRECCION (TE LA PASA NAHUEL X EL GRUPO CUANDO LA PIDAS). SU MAIL ES TECNICA-GRAFICA@GMAIL.COM
+  5) ME GUSTARIA AGREGAR LA FUNCIONALIDAD DEL ICONO DE WHATSAPP EN LA ESQUINA CONSTANTE QUE CUANDO LO TOQUES TE DIRIJA A UN CHAT CON ELLOS EN DICHA PLATAFORMA.
+
+POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
+  CONTADORES DE 0 AL NUMERO QUE DEJE EN LA SECCION "DEJEMOS QUE LOS NUMEROS HABLEN"
+  AGREGAR VIDEO (GENERICO X AHORA) AL INICIO
+  AGREGAR ANIMACION TRANSICION INICIAL A LA WEB NI BIEN SE ABRA. TODO ESTO SE HACE CON JS.
+
+  INVESITIGATE TAMBIEN VIENDO OTROS SITIOS WEBS COMO HACER LA PAGINA MAS DIVERTIDA, QUIERO MAS MOVIMIENTO.
+
+
+  -----------------------------------
+  NAHUEL AUN DEBE RECOLECTAR LAS FOTOS DE CALIDAD Y LOGOS PARA AGREGAR EN SECCIONES "SERVICIOS" Y "NUESTROS TRABAJOS"
+
+
+-->
+
+
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Técnica — Sitio demo</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (para iconografía rápida) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Fuente opcional (quitar si no la querés) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia (la creamos después) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Mínimos para visualizar el esqueleto (luego pasamos a styles.css) */
+    :root { --bg-marmol: #f5f5f5; }
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    section { padding: 72px 0; }
+    .bg-marmol { background: var(--bg-marmol); }
+    .hero {
+      min-height: 80vh;
+      background: url("assets/img/hero.jpg") center/cover no-repeat;
+      position: relative;
+      color: #fff;
+    }
+    .hero::after { content:""; position:absolute; inset:0; background: rgba(0,0,0,.35); }
+    .hero > .container { position: relative; z-index: 2; }
+    .rounded-xxl { border-radius: 2rem; }
+    .metrics .card { background: rgba(255,255,255,.75); backdrop-filter: blur(4px); }
+    .portfolio img, .services img { object-fit: cover; }
+    .brand-logo { height: 48px; object-fit: contain; }
+    footer { padding: 56px 0 24px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100 top-0 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <!-- Reemplazar por tu logo en blanco -->
+        <img src="assets/img/logo-blanco.svg" alt="Técnica" height="36">
+        <span class="fw-semibold">Técnica</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero d-flex align-items-center">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">
+          <h1 class="display-5 fw-bold">Técnica</h1>
+          <p class="lead mb-4">Programación web y técnica gráfica para marcas que quieren crecer.</p>
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg rounded-pill px-4">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MÉTRICAS -->
+  <section class="metrics bg-marmol">
+    <div class="container text-center">
+      <h2 class="h3 mb-4 text-muted">Dejemos que los números hablen…</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body py-5">
+              <div class="display-6 fw-bold">+3000</div>
+              <p class="mb-0">Carteles entregados</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body py-5">
+              <div class="display-6 fw-bold">+20</div>
+              <p class="mb-0">Años de experiencia</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body py-5">
+              <div class="display-6 fw-bold">+150</div>
+              <p class="mb-0">Clientes felices</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#trabajos" class="btn btn-dark rounded-pill mt-4">Ver trabajos</a>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes" class="bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-1 order-2">
+          <h2 class="h3 mb-3">Quiénes somos</h2>
+          <p class="mb-3">Somos un equipo de diseño y desarrollo que combina identidad visual sólida con código optimizado para resultados reales.</p>
+          <p class="mb-4">Creamos sitios rápidos, accesibles y listos para posicionar, acompañados de una estética consistente en web y piezas gráficas.</p>
+          <a href="#servicios" class="btn btn-outline-dark rounded-pill">Conocer servicios</a>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-1">
+          <!-- Reemplazar imagen -->
+          <img src="assets/img/team.jpg" class="img-fluid rounded-xxl" alt="Equipo Técnica" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="bg-marmol">
+    <div class="container">
+      <h2 class="h3 text-center mb-5">Servicios</h2>
+      <div class="row g-4 services">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="assets/img/serv-1.jpg" class="card-img-top" alt="Servicio 1" height="220">
+            <div class="card-body">
+              <h3 class="h5">Programación Web</h3>
+              <p class="mb-0">Sitios y landings en Bootstrap/React, optimizados para Core Web Vitals y SEO técnico.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="assets/img/serv-2.jpg" class="card-img-top" alt="Servicio 2" height="220">
+            <div class="card-body">
+              <h3 class="h5">Técnica Gráfica</h3>
+              <p class="mb-0">Identidad visual, UI kit, banners y piezas para redes coherentes con tu marca.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="assets/img/serv-3.jpg" class="card-img-top" alt="Servicio 3" height="220">
+            <div class="card-body">
+              <h3 class="h5">Portafolio & Señalética</h3>
+              <p class="mb-0">Muestras de trabajos, cartelería, y casos de éxito para inspirar confianza.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTROS TRABAJOS (grid 3x3) -->
+  <section id="trabajos" class="bg-white portfolio">
+    <div class="container">
+      <h2 class="h3 text-center mb-5">Nuestros trabajos</h2>
+      <div class="row g-4">
+        <!-- 9 placeholders -->
+        <!-- Reemplazá src por tus imágenes -->
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-1.jpg" alt="Trabajo 1" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-2.jpg" alt="Trabajo 2" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-3.jpg" alt="Trabajo 3" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-4.jpg" alt="Trabajo 4" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-5.jpg" alt="Trabajo 5" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-6.jpg" alt="Trabajo 6" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-7.jpg" alt="Trabajo 7" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-8.jpg" alt="Trabajo 8" height="220"></div>
+        <div class="col-6 col-md-4"><img class="w-100 rounded-4" src="assets/img/work-9.jpg" alt="Trabajo 9" height="220"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES (carrusel logos “TOKYO…”) -->
+  <section id="clientes" class="bg-marmol">
+    <div class="container">
+      <h2 class="h3 text-center mb-4">Negocios con los que trabajamos</h2>
+
+      <div id="carouselBrands" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center gap-4 align-items-center">
+              <!-- reemplazar por png/svg reales -->
+              <img src="assets/img/brand-1.svg" class="brand-logo" alt="Marca 1">
+              <img src="assets/img/brand-2.svg" class="brand-logo" alt="Marca 2">
+              <img src="assets/img/brand-3.svg" class="brand-logo" alt="Marca 3">
+              <img src="assets/img/brand-4.svg" class="brand-logo" alt="Marca 4">
+              <img src="assets/img/brand-5.svg" class="brand-logo" alt="Marca 5">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center gap-4 align-items-center">
+              <img src="assets/img/brand-6.svg" class="brand-logo" alt="Marca 6">
+              <img src="assets/img/brand-7.svg" class="brand-logo" alt="Marca 7">
+              <img src="assets/img/brand-8.svg" class="brand-logo" alt="Marca 8">
+              <img src="assets/img/brand-9.svg" class="brand-logo" alt="Marca 9">
+              <img src="assets/img/brand-10.svg" class="brand-logo" alt="Marca 10">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators position-static mt-4">
+          <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-white">
+    <div class="container">
+      <h2 class="h3 mb-4">Contacto</h2>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <ul class="list-unstyled fs-5">
+            <li class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-envelope fs-3"></i>
+              <span>hola@tecnica.com</span>
+            </li>
+            <li class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-telephone fs-3"></i>
+              <span>+54 9 11 0000-0000</span>
+            </li>
+            <li class="d-flex align-items-center gap-3">
+              <i class="bi bi-instagram fs-3"></i>
+              <span>@tecnica.estudio</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <!-- Mapa (placeholder). Reemplazar por iframe de Google Maps o mapa estático -->
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
+            <iframe
+              title="Mapa Técnica"
+              src="https://maps.google.com/maps?q=Buenos%20Aires&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-marmol">
+    <div class="container text-center text-muted"> 
+      <div class="small">Este sitio web fue creado por Wequark • © <span id="year"></span> Técnica Grafica</div> <!--TOBI: QUE WEQUARK SEA UN ENLACE A NUESTRA WEB WEQUARK.COM -->
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JS mínimo (aumentaremos luego)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+<script> // TOBI: MOVEME ESTO A UN ARCHIVO JS Y ASEGURATE Q SIGA FUNCIONANDO
+  const nav = document.querySelector('.navbar');
+  const setBodyOffset = () => {
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+  };
+  setBodyOffset();
+  window.addEventListener('resize', setBodyOffset);
+
+  // sólido al scrollear (como ya tenías)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) nav.classList.add('is-stuck');
+    else nav.classList.remove('is-stuck');
+  }, { passive: true });
+</script>
+
