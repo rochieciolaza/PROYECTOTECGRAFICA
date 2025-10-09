@@ -123,13 +123,15 @@ a{
 .metrics .card p{ color: var(--ink-2); }
 
 /* -------- Quiénes somos -------- */
+#quienes .container{
+  display: grid;
+}
+
 #quienes img{
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4/3;
+  width: 30vw;
+  height: fit-content;/*
+  aspect-ratio: 4/3;*/
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-1);
 }
 
 /* -------- Servicios -------- */
@@ -252,4 +254,44 @@ section{ padding: 76px 0; }
     left: 0;
     width: 100%;
     height: fit-content;
+}
+
+/* Animaciones */
+@keyframes fadeFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estado inicial */
+.fade-side,
+.fade-right {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.3s ease;
+}
+
+/* Activa animación cuando entra */
+.fade-side.animate {
+  animation: fadeFromLeft 1s ease forwards;
+}
+
+.fade-right.animate {
+  animation: fadeFromRight 1s ease forwards;
 }

@@ -53,6 +53,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 
   <!-- Hoja de estilos propia (la creamos después) -->
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/animate.css">
 
   <style>
     /* Mínimos para visualizar el esqueleto (luego pasamos a styles.css) */
@@ -157,21 +158,33 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 
   <!-- QUIÉNES SOMOS -->
   <section id="quienes" class="bg-white">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 order-lg-1 order-2">
-          <h2 class="h3 mb-3">Quiénes somos</h2>
-          <p class="mb-3">Somos un equipo de diseño y desarrollo que combina identidad visual sólida con código optimizado para resultados reales.</p>
-          <p class="mb-4">Creamos sitios rápidos, accesibles y listos para posicionar, acompañados de una estética consistente en web y piezas gráficas.</p>
-          <a href="#servicios" class="btn btn-outline-dark rounded-pill">Conocer servicios</a>
-        </div>
-        <div class="col-lg-6 order-lg-2 order-1">
-          <!-- Reemplazar imagen -->
-          <img src="assets/img/team.jpg" class="img-fluid rounded-xxl" alt="Equipo Técnica" loading="lazy">
-        </div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <!-- Texto a la izquierda -->
+      <div class="col-lg-6 order-lg-1 order-2 fade-side">
+        <h2 class="h3 mb-3">Quiénes somos</h2>
+        <p class="mb-3">
+          Somos un equipo de diseño y desarrollo que combina identidad visual sólida con código optimizado para resultados reales.
+        </p>
+        <p class="mb-4">
+          Creamos sitios rápidos, accesibles y listos para posicionar, acompañados de una estética consistente en web y piezas gráficas.
+        </p>
+        <a href="#servicios" class="btn btn-outline-dark rounded-pill">Conocer servicios</a>
       </div>
+
+      <!-- Imagen a la derecha -->
+      <div class="col-lg-6 order-lg-2 order-1 fade-up text-center text-lg-end">
+        <img src="../IMG/logo.png" 
+             class="img-fluid rounded-xxl" 
+             alt="Equipo Técnica" 
+             loading="lazy"
+             style="max-width: 80%; height: auto;">
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="bg-marmol">
@@ -440,6 +453,10 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
               <i class="bi bi-instagram fs-3"></i>
               <span>@tecnicagrafica</span>
             </li>
+            <li class="d-flex align-items-center gap-3 mb-3">
+              <i class="bi bi-facebook fs-3"></i>
+              <span>Técnica Letreros</span>
+            </li>
             <li class="d-flex align-items-center gap-3">
               <i class="bi bi-geo-alt fs-3"></i>
               <span>Rivadavia 6037</span>
@@ -449,16 +466,28 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-lg-7">
           <!-- Mapa (placeholder). Reemplazar por iframe de Google Maps o mapa estático -->
           <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
-            <iframe
-              title="Mapa Técnica"
-              src="https://maps.google.com/maps?q=Buenos%20Aires&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.765062492769!2d-57.584693624416914!3d-37.98261177193366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d93de51a12d5%3A0x1f3d00667ddb0702!2sRivadavia%206037%2C%20B7604BTU%20Mar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1760027135563!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <form
+  action="https://formspree.io/f/mzzjjpne"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
   <!-- FOOTER -->
   <footer class="bg-marmol">
@@ -473,11 +502,32 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
     // JS mínimo (aumentaremos luego)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      } else {
+        // Cuando sale del viewport, quitamos la clase
+        // así se puede volver a animar al reentrar
+        entry.target.classList.remove("animate");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll(".fade-side, .fade-right").forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
+
 </body>
 </html>
 
 
 <script src="../JS/nav.js"></script>
 <script src="../JS/numeros.js"></script>
+<script src="../JS/scrolla.jquery.js"></script>
 
 
