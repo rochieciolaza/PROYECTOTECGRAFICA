@@ -36,6 +36,10 @@ body {
 .text-muted{ color: var(--ink-2) !important; }
 
 /* -------- Tipografía -------- */
+.fw-semibold {
+  color: #003563;
+}
+
 h1, h2, h3, .display-5{
   letter-spacing: .2px;
 }
@@ -129,6 +133,10 @@ a{
 }
 
 /* -------- Servicios -------- */
+.services .col-md-4{
+  padding-top: 1rem;
+}
+
 .services .card{
   border-radius: 1.25rem;
   overflow: hidden;
