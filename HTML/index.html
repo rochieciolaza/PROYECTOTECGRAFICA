@@ -71,13 +71,20 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
     .hero > .container { position: relative; z-index: 2; }
     .rounded-xxl { border-radius: 2rem; }
     .metrics .card { background: rgba(255,255,255,.75); backdrop-filter: blur(4px); }
-    .portfolio img, .services img { object-fit: cover; }
+    .portfolio img { object-fit: cover; }
     .brand-logo { height: 48px; object-fit: contain; }
     footer { padding: 56px 0 24px; }
   </style>
 </head>
 
 <body>
+<!-- ANIMACIÓN DE INICIO -->
+<div id="intro-loader">
+  <img src="../IMG/logo.png" alt="Técnica Gráfica Logo" class="spin-logo">
+</div>
+
+
+
 
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100 top-0 shadow-sm">
@@ -111,7 +118,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <!--<img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">-->
-            <h1 class="display-5 fw-bold">Técnica Gráfica</h1>
+            <h1 id="text" class="display-5 fw-bold fancy-text">Técnica Gráfica</h1>
             <p class="lead mb-4">Diseñamos letreros que hablan por vos</p>
             <div class="d-flex gap-3 justify-content-center">
               <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
@@ -195,94 +202,94 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-1.jpg" class="card-img-top" alt="Servicio 1" height="220">
+            <img src="../IMG/servicios/corporeos.jpg" class="card-img-top" alt="Servicio 1" height="220">
             <div class="card-body">
               <h3 class="h5">Corpóreos</h3>
-              <p class="mb-0">Sitios y landings en Bootstrap/React, optimizados para Core Web Vitals y SEO técnico.</p>
+              <p class="mb-0">Letras o logotipos en relieve fabricados en materiales como acrílico o metal, ideales para destacar la identidad visual.</p>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-2.jpg" class="card-img-top" alt="Servicio 2" height="220">
+            <img src="../IMG/servicios/marquesina.jpg" class="card-img-top" alt="Servicio 2" height="220">
             <div class="card-body">
               <h3 class="h5">Marquesina</h3>
-              <p class="mb-0">Identidad visual, UI kit, banners y piezas para redes coherentes con tu marca.</p>
+              <p class="mb-0">Cartel ubicado sobre la entrada de un local o negocio, generalmente iluminado, que identifica y da visibilidad al comercio.</p>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-3.jpg" class="card-img-top" alt="Servicio 3" height="220">
+            <img src="../IMG/servicios/ploter.jpg" class="card-img-top" alt="Servicio 3" height="220">
             <div class="card-body">
               <h3 class="h5">Ploter</h3>
-              <p class="mb-0">Muestras de trabajos, cartelería, y casos de éxito para inspirar confianza.</p>
+              <p class="mb-0">Impresiones de gran formato utilizadas para vinilos, carteles o decoración, con alta precisión y calidad de color.</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row g-4 services">
+      
+      
         <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-1.jpg" class="card-img-top" alt="Servicio 1" height="220">
+            <img src="../IMG/servicios/ploteovehicular.jpg" class="card-img-top" alt="Servicio 4" height="220">
             <div class="card-body">
               <h3 class="h5">Ploteo Vehicular</h3>
-              <p class="mb-0">Sitios y landings en Bootstrap/React, optimizados para Core Web Vitals y SEO técnico.</p>
+              <p class="mb-0">Vinilos personalizados aplicados sobre autos o camionetas para convertirlos en soporte publicitario.</p>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-2.jpg" class="card-img-top" alt="Servicio 2" height="220">
+            <img src="../IMG/servicios/frontlight.jpg" class="card-img-top" alt="Servicio 5" height="220">
             <div class="card-body">
               <h3 class="h5">Cartelería Frontlight</h3>
-              <p class="mb-0">Identidad visual, UI kit, banners y piezas para redes coherentes con tu marca.</p>
+              <p class="mb-0">Carteles iluminados desde el frente con reflectores, ideales para exteriores y buena visibilidad nocturna.</p>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-3.jpg" class="card-img-top" alt="Servicio 3" height="220">
+            <img src="../IMG/servicios/backlight.jpg" class="card-img-top" alt="Servicio 6" height="220">
             <div class="card-body">
               <h3 class="h5">Cartelería Backlight</h3>
-              <p class="mb-0">Muestras de trabajos, cartelería, y casos de éxito para inspirar confianza.</p>
+              <p class="mb-0">Carteles con iluminación interna que resalta los colores y detalles, perfectos para interiores o marquesinas.</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row g-4 services">
+      
+      
         <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-1.jpg" class="card-img-top" alt="Servicio 1" height="220">
+            <img src="../IMG/servicios/neon.jpg" class="card-img-top" alt="Servicio 7" height="220">
             <div class="card-body">
               <h3 class="h5">Carteles en neón</h3>
-              <p class="mb-0">Sitios y landings en Bootstrap/React, optimizados para Core Web Vitals y SEO técnico.</p>
+              <p class="mb-0">Tubos luminosos o luces LED que forman letras o figuras, usados para dar estilo y visibilidad al local.</p>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-2.jpg" class="card-img-top" alt="Servicio 2" height="220">
+            <img src="../IMG/servicios/señalizacion.jpg" class="card-img-top" alt="Servicio 8" height="220">
             <div class="card-body">
               <h3 class="h5">Señalización</h3>
-              <p class="mb-0">Identidad visual, UI kit, banners y piezas para redes coherentes con tu marca.</p>
+              <p class="mb-0">Carteles o gráficos que orientan, informan o advierten dentro de empresas, locales o espacios públicos.</p>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
-            <img src="assets/img/serv-3.jpg" class="card-img-top" alt="Servicio 3" height="220">
+            <img src="../IMG/servicios/ruta.jpg" class="card-img-top" alt="Servicio 9" height="220">
             <div class="card-body">
               <h3 class="h5">Cartelería en ruta</h3>
-              <p class="mb-0">Muestras de trabajos, cartelería, y casos de éxito para inspirar confianza.</p>
+              <p class="mb-0">Carteles de gran tamaño instalados en rutas o autopistas para aumentar la exposición.</p>
             </div>
           </div>
         </div>
@@ -294,25 +301,37 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <section id="trabajos" class="bg-white portfolio">
     <div class="container">
       <h2 class="h3 text-center mb-5">Nuestros trabajos</h2>
-      <div class="row g-2  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-1.jpg" alt="Trabajo 1" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-2.jpg" alt="Trabajo 2" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-3.jpg" alt="Trabajo 3" height="220"></div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo1.jpg" alt="Trabajo 1" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo2.jpg" alt="Trabajo 2" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo3.jpg" alt="Trabajo 3" height="220"></div>
       </div>
-      <div class="row g-2  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-1.jpg" alt="Trabajo 1" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-2.jpg" alt="Trabajo 2" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-3.jpg" alt="Trabajo 3" height="220"></div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo4.jpg" alt="Trabajo 4" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo5.jpg" alt="Trabajo 5" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo6.jpg" alt="Trabajo 6" height="220"></div>
       </div>
-      <div class="row g-2  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-1.jpg" alt="Trabajo 1" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-2.jpg" alt="Trabajo 2" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-3.jpg" alt="Trabajo 3" height="220"></div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo7.jpg" alt="Trabajo 7" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo8.jpg" alt="Trabajo 8" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo9.jpg" alt="Trabajo 9" height="220"></div>
       </div>
-      <div class="row g-2  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-1.jpg" alt="Trabajo 1" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-2.jpg" alt="Trabajo 2" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="assets/img/work-3.jpg" alt="Trabajo 3" height="220"></div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo10.jpg" alt="Trabajo 10" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo11.jpg" alt="Trabajo 11" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo12.jpg" alt="Trabajo 12" height="220"></div>
+      </div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo13.jpg" alt="Trabajo 10" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo14.jpg" alt="Trabajo 11" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo15.jpg" alt="Trabajo 12" height="220"></div>
+      </div>
+      <div class="row g-0  justify-content-center">
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo16.jpg" alt="Trabajo 10" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo17.jpg" alt="Trabajo 11" height="220"></div>
+      </div>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="https://www.instagram.com/tecnicagrafica" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
       </div>
   </section>
 
@@ -326,101 +345,92 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           <div class="carousel-item active">
             <div class="d-flex justify-content-center gap-4 align-items-center">
               <!-- reemplazar por png/svg reales -->
-              <img src="../IMG/logos2.0/4.png" class="brand-logo" alt="Marca 1">
-              <img src="../IMG/logos/logoaguero.png" class="brand-logo" alt="Marca 2">
-              <img src="../IMG/logos/logoambito.png" class="brand-logo" alt="Marca 3">
-              <img src="../IMG/logos/logoantonucci.png" class="brand-logo" alt="Marca 4">
-              <img src="../IMG/logos/logobaum.png" class="brand-logo" alt="Marca 5">
+              <img src="../IMG/logos_editados/logo_abraham.png" class="brand-logo" alt="Marca 1">
+              <img src="../IMG/logos_editados/logo_aguero.png" class="brand-logo" alt="Marca 2">
+              <img src="../IMG/logos_editados/logo_ambito.png" class="brand-logo" alt="Marca 3">
+              <img src="../IMG/logos_editados/logo_antoniucci.png" class="brand-logo" alt="Marca 4">
+              <img src="../IMG/logos_editados/logo_arqui.png" class="brand-logo" alt="Marca 5">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logobeldent.png" class="brand-logo" alt="Marca 6">
-              <img src="../IMG/logos/logobuquebus.png" class="brand-logo" alt="Marca 7">
-              <img src="../IMG/logos/logocads.png" class="brand-logo" alt="Marca 8">
-              <img src="../IMG/logos/logocampoverde.png" class="brand-logo" alt="Marca 9">
-              <img src="../IMG/logos/logocerrosud.png" class="brand-logo" alt="Marca 10">
+              <img src="../IMG/logos_editados/logo_baum.png" class="brand-logo" alt="Marca 6">
+              <img src="../IMG/logos_editados/logo_beldent.png" class="brand-logo" alt="Marca 7">
+              <img src="../IMG/logos_editados/logo_buquebus.png" class="brand-logo" alt="Marca 8">
+              <img src="../IMG/logos_editados/logo_cads.png" class="brand-logo" alt="Marca 9">
+              <img src="../IMG/logos_editados/logo_campoverde.png" class="brand-logo" alt="Marca 10">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logoclinicacolon.png" class="brand-logo" alt="Marca 11">
-              <img src="../IMG/logos/logocoarco.png" class="brand-logo" alt="Marca 12">
-              <img src="../IMG/logos/logocoffee.png" class="brand-logo" alt="Marca 13">
-              <img src="../IMG/logos/logocolegioarqui.png" class="brand-logo" alt="Marca 14">
-              <img src="../IMG/logos/logocuchillodepalo.png" class="brand-logo" alt="Marca 15">
+              <img src="../IMG/logos_editados/logo_cerrosud.png" class="brand-logo" alt="Marca 11">
+              <img src="../IMG/logos_editados/logo_coarco.png" class="brand-logo" alt="Marca 12">
+              <img src="../IMG/logos_editados/logo_coffe.png" class="brand-logo" alt="Marca 13">
+              <img src="../IMG/logos_editados/logo_coarco.png" class="brand-logo" alt="Marca 14">
+              <img src="../IMG/logos_editados/logo_cuchillo.png" class="brand-logo" alt="Marca 15">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logodf.png" class="brand-logo" alt="Marca 16">
-              <img src="../IMG/logos/logodiprima.png" class="brand-logo" alt="Marca 17">
-              <img src="../IMG/logos/logodrugstore.png" class="brand-logo" alt="Marca 18">
-              <img src="../IMG/logos/logoespatolero.png" class="brand-logo" alt="Marca 19">
-              <img src="../IMG/logos/logoexperta.png" class="brand-logo" alt="Marca 20">
+              <img src="../IMG/logos_editados/logo_df.png" class="brand-logo" alt="Marca 16">
+              <img src="../IMG/logos_editados/logo_diprima.png" class="brand-logo" alt="Marca 17">
+              <img src="../IMG/logos_editados/logo_drugstore.png" class="brand-logo" alt="Marca 18">
+              <img src="../IMG/logos_editados/logo_espatolero.png" class="brand-logo" alt="Marca 19">
+              <img src="../IMG/logos_editados/logo_experta.png" class="brand-logo" alt="Marca 20">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logojohnson.png" class="brand-logo" alt="Marca 21">
-              <img src="../IMG/logos/logolabancaria.png" class="brand-logo" alt="Marca 22">
-              <img src="../IMG/logos/logolacardeuse.png" class="brand-logo" alt="Marca 23">
-              <img src="../IMG/logos/logolamartina.png" class="brand-logo" alt="Marca 24">
-              <img src="../IMG/logos/logolasegunda.png" class="brand-logo" alt="Marca 25">
+              <img src="../IMG/logos_editados/logo_johnson.png" class="brand-logo" alt="Marca 21">
+              <img src="../IMG/logos_editados/logo_labancaria.png" class="brand-logo" alt="Marca 22">
+              <img src="../IMG/logos_editados/logo_lacardeuse.png" class="brand-logo" alt="Marca 23">
+              <img src="../IMG/logos_editados/logo_lamartina.png" class="brand-logo" alt="Marca 24">
+              <img src="../IMG/logos_editados/logo_lasegunda.png" class="brand-logo" alt="Marca 25">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logolindas.png" class="brand-logo" alt="Marca 26">
-              <img src="../IMG/logos/logomacrofer.png" class="brand-logo" alt="Marca 27">
-              <img src="../IMG/logos/logomandinga.png" class="brand-logo" alt="Marca 28">
-              <img src="../IMG/logos/logomapfre.png" class="brand-logo" alt="Marca 29">
-              <img src="../IMG/logos/logomartinez.png" class="brand-logo" alt="Marca 30">
+              <img src="../IMG/logos_editados/logo_lindas.png" class="brand-logo" alt="Marca 26">
+              <img src="../IMG/logos_editados/logo_macrofer.png" class="brand-logo" alt="Marca 27">
+              <img src="../IMG/logos_editados/logo_mandinga.png" class="brand-logo" alt="Marca 28">
+              <img src="../IMG/logos_editados/logo_mapfre.png" class="brand-logo" alt="Marca 29">
+              <img src="../IMG/logos_editados/logo_martinez.png" class="brand-logo" alt="Marca 30">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logomedife.png" class="brand-logo" alt="Marca 31">
-              <img src="../IMG/logos/logomegatone.png" class="brand-logo" alt="Marca 32">
-              <img src="../IMG/logos/logomilka.png" class="brand-logo" alt="Marca 33">
-              <img src="../IMG/logos/logomingo.png" class="brand-logo" alt="Marca 34">
-              <img src="../IMG/logos/logomondelez.png" class="brand-logo" alt="Marca 35">
+              <img src="../IMG/logos_editados/logo_medife.png" class="brand-logo" alt="Marca 31">
+              <img src="../IMG/logos_editados/logo_megatone.png" class="brand-logo" alt="Marca 32">
+              <img src="../IMG/logos_editados/logo_milka.png" class="brand-logo" alt="Marca 33">
+              <img src="../IMG/logos_editados/logo_mingo.png" class="brand-logo" alt="Marca 34">
+              <img src="../IMG/logos_editados/logo_mondelez.png" class="brand-logo" alt="Marca 35">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logomotocentro.png" class="brand-logo" alt="Marca 36">
-              <img src="../IMG/logos/logomuscetta.png" class="brand-logo" alt="Marca 37">
-              <img src="../IMG/logos/logonaldo.png" class="brand-logo" alt="Marca 38">
-              <img src="../IMG/logos/logonewberry.png" class="brand-logo" alt="Marca 39">
-              <img src="../IMG/logos/logonewgarden.png" class="brand-logo" alt="Marca 40">
+              <img src="../IMG/logos_editados/logo_motocentro.png" class="brand-logo" alt="Marca 36">
+              <img src="../IMG/logos_editados/logo_muscetta.png" class="brand-logo" alt="Marca 37">
+              <img src="../IMG/logos_editados/logo_naldo.png" class="brand-logo" alt="Marca 38">
+              <img src="../IMG/logos_editados/logo_newberry.png" class="brand-logo" alt="Marca 39">
+              <img src="../IMG/logos_editados/logo_newgarden.png" class="brand-logo" alt="Marca 40">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logoopticaluro.png" class="brand-logo" alt="Marca 41">
-              <img src="../IMG/logos/logoparliamo.png" class="brand-logo" alt="Marca 42">
-              <img src="../IMG/logos/logopiantoni.png" class="brand-logo" alt="Marca 43">
-              <img src="../IMG/logos/logoraffaelli.png" class="brand-logo" alt="Marca 44">
-              <img src="../IMG/logos/logoraffe.png" class="brand-logo" alt="Marca 45">
+              <img src="../IMG/logos_editados/logo_opticaluro.png" class="brand-logo" alt="Marca 41">
+              <img src="../IMG/logos_editados/logo_parliamo.png" class="brand-logo" alt="Marca 42">
+              <img src="../IMG/logos_editados/logo_piantoni.png" class="brand-logo" alt="Marca 43">
+              <img src="../IMG/logos_editados/logo_raffaelli.png" class="brand-logo" alt="Marca 44">
+              <img src="../IMG/logos_editados/logo_raffe.png" class="brand-logo" alt="Marca 45">
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/logos/logorapipago.png" class="brand-logo" alt="Marca 46">
-              <img src="../IMG/logos/logorobinson.png" class="brand-logo" alt="Marca 47">
-              <img src="../IMG/logos/logoucip.png" class="brand-logo" alt="Marca 48">
-              <img src="../IMG/logos/logovega.png" class="brand-logo" alt="Marca 49">
-              <img src="../IMG/logos/logoviacargo.png" class="brand-logo" alt="Marca 50">
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center gap-4 align-items-center">
-              <img src="../IMG/Untitled design/1.png" class="brand-logo" alt="Marca 51">
-              <img src="../IMG/Untitled design/2.png" class="brand-logo" alt="Marca 52">
-              <img src="../IMG/Untitled design/3.png" class="brand-logo" alt="Marca 53">
-              <img src="../IMG/Untitled design/4.png" class="brand-logo" alt="Marca 54">
-              <img src="../IMG/Untitled design/5.png" class="brand-logo" alt="Marca 55">
+              <img src="../IMG/logos_editados/logo_rapipago.png" class="brand-logo" alt="Marca 46">
+              <img src="../IMG/logos_editados/logo_robinson.png" class="brand-logo" alt="Marca 47">
+              <img src="../IMG/logos_editados/logo_ucip.png" class="brand-logo" alt="Marca 48">
+              <img src="../IMG/logos_editados/logo_vega.png" class="brand-logo" alt="Marca 49">
+              <img src="../IMG/logos_editados/logo_viacargo.png" class="brand-logo" alt="Marca 50">
             </div>
           </div>
         </div>
@@ -435,7 +445,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="7" aria-label="Slide 8"></button>
           <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="8" aria-label="Slide 9"></button>
           <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="9" aria-label="Slide 10"></button>
-          <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="10" aria-label="Slide 11"></button>
         </div>
       </div>
     </div>
@@ -451,10 +460,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             <li class="d-flex align-items-center gap-3 mb-3">
               <i class="bi bi-envelope fs-3"></i>
               <span>tecnica-grafica@gmail.com</span>
-            </li>
-            <li>
-              <i class="bi bi-white fs-3"></i>
-              <span>.</span>
             </li>
             <li class="d-flex align-items-center gap-3 mb-3">
               <i class="bi bi-telephone fs-3"></i>
@@ -481,24 +486,22 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           </div>
         </div>
       </div>
+
+      <form action="https://formspree.io/f/mzzjjpne" method="POST" class="contact-form">
+          <div class="mb-3">
+            <label for="email" class="form-label">Tu correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Tu mensaje</label>
+            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark rounded-pill px-4">Enviar</button>
+        </form>
     </div>
   </section>
-
-  <form
-  action="https://formspree.io/f/mzzjjpne"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
 
   <!-- FOOTER -->
   <footer class="bg-marmol">
@@ -513,25 +516,13 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
     // JS mínimo (aumentaremos luego)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      } else {
-        entry.target.classList.remove("animate");
-      }
-    });
-  }, { threshold: 0.3 });
-
-  //  Observa todos los elementos con fade-up
-  document.querySelectorAll(".fade-side, .fade-right, .fade-up").forEach(el => {
-    observer.observe(el);
-  });
-});
-</script>
-
+  
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <img src="" alt="Imagen ampliada">
+  <button id="prev-btn" class="nav-btn">‹</button>
+  <button id="next-btn" class="nav-btn">›</button>
+</div>
 
 </body>
 </html>
@@ -539,6 +530,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script src="../JS/nav.js"></script>
 <script src="../JS/numeros.js"></script>
-<script src="../JS/scrolla.jquery.js"></script>
+<script src="../JS/inicio.js"></script>
+<script src="../JS/animaciones.js"></script>
+<script src="../JS/imagen.js"></script>
+
+
 
 
