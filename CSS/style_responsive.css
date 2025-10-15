@@ -147,11 +147,26 @@ a{
   display: grid;
 }
 
-#quienes img {
+#quienes .col-lg-6:last-child {
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente */
+}
+
+#quienes .col-lg-6:last-child img {
   width: 100%;
-  object-fit: contain; /* mantiene proporción sin deformar */
+  height: auto;
+  max-width: 50%;
+  object-fit: cover;
   border-radius: var(--radius-lg);
-  max-width: 400px; /* opcional: evita que sea gigante en pantallas grandes */
+}
+
+#quienes .btn{
+  align-self: self-end;
+}
+
+#quienes .col-lg-6{
+  align-self: center;
 }
 
 /* -------- Portfolio (grid 3x3) -------- */
@@ -714,3 +729,4 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 576px) {
   .brand-logo { height: 32px; }
 }
+
