@@ -52,36 +52,16 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Hoja de estilos propia (la creamos después) -->
-  <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="../CSS/animate.css">
+  <link rel="stylesheet" href="../CSS/style_responsive.css">
 
-  <style>
-    /* Mínimos para visualizar el esqueleto (luego pasamos a styles.css) */
-    :root { --bg-marmol: #f5f5f5; }
-    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-    section { padding: 72px 0; }
-    .bg-marmol { background: var(--bg-marmol); }
-    .hero {
-      min-height: 86vh;
-      background: url("assets/img/hero.jpg") center/cover no-repeat;
-      position: relative;
-      color: #fff;
-    }
-    .hero::after { content:""; position:absolute; inset:0; background: rgba(0,0,0,.35); }
-    .hero > .container { position: relative; z-index: 2; }
-    .rounded-xxl { border-radius: 2rem; }
-    .metrics .card { background: rgba(255,255,255,.75); backdrop-filter: blur(4px); }
-    .portfolio img { object-fit: cover; }
-    .brand-logo { height: 48px; object-fit: contain; }
-    footer { padding: 56px 0 24px; }
-  </style>
+
 </head>
 
 <body>
-<!-- ANIMACIÓN DE INICIO -->
+<!-- ANIMACIÓN DE INICIO 
 <div id="intro-loader">
   <img src="../IMG/logo.png" alt="Técnica Gráfica Logo" class="spin-logo">
-</div>
+</div> -->
 
 
 
@@ -90,7 +70,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <nav class="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100 top-0 shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <!-- Reemplazar por tu logo en blanco -->
         <img src="../IMG/logo.png" alt="Técnica" height="36">
         <span class="fw-semibold">Técnica Gráfica</span>
       </a>
@@ -111,7 +90,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <!-- HERO -->
   <header class="hero d-flex align-items-center">
     <div class="video-container">
-      <video src="../IMG/99940-654330952byn.mp4" autoplay loop muted poster="">
+      <video src="../IMG/videorealentizado.mp4" autoplay loop muted poster="">
       </video>
     </div>
     <div class="container text-center">
@@ -183,7 +162,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 
       <!-- Imagen a la derecha -->
       <div class="col-lg-6 order-lg-2 order-1 text-center text-lg-end">
-        <img src="../IMG/logo.png" 
+        <img src="../IMG/quienessomos.jpg" 
              class="img-fluid rounded-xxl" 
              alt="Equipo Técnica" 
              loading="lazy"
@@ -199,7 +178,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
     <div class="container">
       <h2 class="h3 text-center mb-5">Servicios</h2>
       <div class="row g-4 services">
-        <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/corporeos.jpg" class="card-img-top" alt="Servicio 1" height="220">
@@ -209,7 +187,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/marquesina.jpg" class="card-img-top" alt="Servicio 2" height="220">
@@ -219,7 +196,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ploter.jpg" class="card-img-top" alt="Servicio 3" height="220">
@@ -229,9 +205,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-      
-      
-        <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ploteovehicular.jpg" class="card-img-top" alt="Servicio 4" height="220">
@@ -241,7 +214,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/frontlight.jpg" class="card-img-top" alt="Servicio 5" height="220">
@@ -251,7 +223,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/backlight.jpg" class="card-img-top" alt="Servicio 6" height="220">
@@ -261,9 +232,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-      
-      
-        <!-- Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/neon.jpg" class="card-img-top" alt="Servicio 7" height="220">
@@ -273,7 +241,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/señalizacion.jpg" class="card-img-top" alt="Servicio 8" height="220">
@@ -283,7 +250,6 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ruta.jpg" class="card-img-top" alt="Servicio 9" height="220">
@@ -302,33 +268,34 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
     <div class="container">
       <h2 class="h3 text-center mb-5">Nuestros trabajos</h2>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo1.jpg" alt="Trabajo 1" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo2.jpg" alt="Trabajo 2" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo3.jpg" alt="Trabajo 3" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo1.jpg" alt="Trabajo 1" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo2.jpg" alt="Trabajo 2" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo3.jpg" alt="Trabajo 3" height="220"></div>
       </div>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo4.jpg" alt="Trabajo 4" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo5.jpg" alt="Trabajo 5" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo6.jpg" alt="Trabajo 6" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo4.jpg" alt="Trabajo 4" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo5.jpg" alt="Trabajo 5" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo6.jpg" alt="Trabajo 6" height="220"></div>
       </div>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo7.jpg" alt="Trabajo 7" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo8.jpg" alt="Trabajo 8" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo9.jpg" alt="Trabajo 9" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo7.jpg" alt="Trabajo 7" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo8.jpg" alt="Trabajo 8" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo9.jpg" alt="Trabajo 9" height="220"></div>
       </div>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo10.jpg" alt="Trabajo 10" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo11.jpg" alt="Trabajo 11" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo12.jpg" alt="Trabajo 12" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo10.jpg" alt="Trabajo 10" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo11.jpg" alt="Trabajo 11" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo12.jpg" alt="Trabajo 12" height="220"></div>
       </div>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo13.jpg" alt="Trabajo 10" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo14.jpg" alt="Trabajo 11" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo15.jpg" alt="Trabajo 12" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo13.jpg" alt="Trabajo 13" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo14.jpg" alt="Trabajo 14" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo15.jpg" alt="Trabajo 15" height="220"></div>
       </div>
       <div class="row g-0  justify-content-center">
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo16.jpg" alt="Trabajo 10" height="220"></div>
-        <div class="col-6 col-md-2 work-item"><img class="w-100 rounded-4" src="../IMG/trabajos/trabajo17.jpg" alt="Trabajo 11" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo16.jpg" alt="Trabajo 16" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo17.jpg" alt="Trabajo 17" height="220"></div>
+        <div class="col-6 col-md-2 work-item"><img class="w-100" src="../IMG/trabajos/trabajo18.jpg" alt="Trabajo 18" height="220"></div>
       </div>
       <div class="d-flex gap-3 justify-content-center">
         <a href="https://www.instagram.com/tecnicagrafica" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
@@ -366,7 +333,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
               <img src="../IMG/logos_editados/logo_cerrosud.png" class="brand-logo" alt="Marca 11">
               <img src="../IMG/logos_editados/logo_coarco.png" class="brand-logo" alt="Marca 12">
               <img src="../IMG/logos_editados/logo_coffe.png" class="brand-logo" alt="Marca 13">
-              <img src="../IMG/logos_editados/logo_coarco.png" class="brand-logo" alt="Marca 14">
+              <img src="../IMG/logos_editados/logo_colon.png" class="brand-logo" alt="Marca 14">
               <img src="../IMG/logos_editados/logo_cuchillo.png" class="brand-logo" alt="Marca 15">
             </div>
           </div>
@@ -486,18 +453,22 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           </div>
         </div>
       </div>
-
+    </div>
+  </section>
+  <section class="bg-marmol">
+    <div class="container">
+      <h2 class="h3 mb-4">Dejanos un mensaje:</h2>
       <form action="https://formspree.io/f/mzzjjpne" method="POST" class="contact-form">
           <div class="mb-3">
-            <label for="email" class="form-label">Tu correo electrónico</label>
+            <label for="email" class="form-label">Tu correo electrónico:</label>
             <input type="email" id="email" name="email" class="form-control" required>
           </div>
-
+  
           <div class="mb-3">
-            <label for="message" class="form-label">Tu mensaje</label>
+            <label for="message" class="form-label">Tu mensaje:</label>
             <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
           </div>
-
+  
           <button type="submit" class="btn btn-dark rounded-pill px-4">Enviar</button>
         </form>
     </div>
@@ -506,16 +477,12 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   <!-- FOOTER -->
   <footer class="bg-marmol">
     <div class="container text-center text-muted"> 
-      <div class="small">Este sitio web fue creado por <a href="https://www.wequark.com">Wequark</a> • © <span id="year"></span> Técnica Grafica</div>
+      <div class="small">Este sitio web fue creado por <a href="https://www.wequark.com" class="h5"><strong>Wequark</strong></a> • © <span id="year"></span> Técnica Grafica</div>
     </div>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // JS mínimo (aumentaremos luego)
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
   
 <!-- LIGHTBOX -->
 <div id="lightbox">
@@ -533,7 +500,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
 <script src="../JS/inicio.js"></script>
 <script src="../JS/animaciones.js"></script>
 <script src="../JS/imagen.js"></script>
-
+<script src="../JS/carrusel.js"></script>
 
 
 

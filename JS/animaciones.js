@@ -44,3 +44,6 @@ for (let char of text) {
     }, 1500);
   });
 }
+
+// JS mínimo (aumentaremos luego)
+    document.getElementById('year').textContent = new Date().getFullYear();
