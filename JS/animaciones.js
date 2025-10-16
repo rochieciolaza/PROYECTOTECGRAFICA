@@ -47,3 +47,17 @@ for (let char of text) {
 
 // JS mínimo (aumentaremos luego)
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mostrar navbar solo después de pasar el video (hero)
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  const hero = document.querySelector(".hero");
+
+  const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+  if (window.scrollY > heroBottom - 100) { // margen para activar antes
+    navbar.classList.add("show");
+  } else {
+    navbar.classList.remove("show");
+  }
+});
