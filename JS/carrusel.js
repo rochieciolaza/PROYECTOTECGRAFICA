@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cantidad de logos por slide según ancho
     let perSlide = 5;
     const width = window.innerWidth;
-    if (width < 576) perSlide = 2;
+    if (width < 576) perSlide = 4; // ← antes era 2, ahora 4 logos en pantallas chicas
     else if (width < 992) perSlide = 3;
 
     // Agrupar logos
@@ -21,13 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < numSlides; i++) {
       const slide = document.createElement("div");
       slide.className = "carousel-item" + (i === 0 ? " active" : "");
+      slide.setAttribute("data-bs-interval", "2000"); // ← intervalo de 1s
 
       const group = document.createElement("div");
-      group.className = "d-flex justify-content-center gap-4 align-items-center flex-wrap";
+      group.className =
+        "d-flex justify-content-center gap-4 align-items-center flex-wrap";
 
-      allLogos.slice(i * perSlide, (i + 1) * perSlide).forEach(logo => {
-        group.appendChild(logo.cloneNode(true));
-      });
+      // Tomar los logos del grupo
+      allLogos
+        .slice(i * perSlide, (i + 1) * perSlide)
+        .forEach((logo) => group.appendChild(logo.cloneNode(true)));
 
       slide.appendChild(group);
       carouselInner.appendChild(slide);

@@ -1,38 +1,3 @@
-<!-- NOTAS ENTRE TOBI Y RO
-
-TOBI, CTRL + F Y BUSCA TU NOMBRE (TOBI), REVISA COMENTARIOS QUE TE VOY DEJANDO, SIEMPRE ARRANCO CON TU NOMBRE PARA QUE LOS VEAS DE ESTA MANERA.
-QUIERO QUE ENTRES AL INSTAGRAM DE LA TECNICA @TECNICAGRAFICA , Y RECOPILES INFO QUE VAS A AGREGAR DE LA SIGUIENTE FORMA
-  1) ENTRAR AL IG
-  2) ANOTAR 1 X 1 LOS NOMBRES DE TODOS LOS CLIENTES QUE ELLOS TIENEN 
-  3) BUSCAR EN GOOGLE LOS LOGOS DE DICHOS CLIENTES CON FORMATO PNG (SIN FONDO) Y AGREGAR TODAS LAS MARCAS PRINCIPALES EN LA SECCION DEL CODIGO "NEGOCIOS CON LOS QUE TRABAJAMOS".
-  TE DEJE ESPACIO PARA 10, SI HACEN FALTA + ESPACIOS AGREGALOS. 
-
-  LUEGO
-  4) CAMBIA EL CELULAR Y AGREGA SU IG A LA SECCION DE CONTACTO, TAMBIEN SU DIRECCION (TE LA PASA NAHUEL X EL GRUPO CUANDO LA PIDAS). SU MAIL ES TECNICA-GRAFICA@GMAIL.COM
-  5) ME GUSTARIA AGREGAR LA FUNCIONALIDAD DEL ICONO DE WHATSAPP EN LA ESQUINA CONSTANTE QUE CUANDO LO TOQUES TE DIRIJA A UN CHAT CON ELLOS EN DICHA PLATAFORMA.
-
-POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
-  CONTADORES DE 0 AL NUMERO QUE DEJE EN LA SECCION "DEJEMOS QUE LOS NUMEROS HABLEN"
-  AGREGAR VIDEO (GENERICO X AHORA) AL INICIO
-  AGREGAR ANIMACION TRANSICION INICIAL A LA WEB NI BIEN SE ABRA. TODO ESTO SE HACE CON JS.
-
-  INVESITIGATE TAMBIEN VIENDO OTROS SITIOS WEBS COMO HACER LA PAGINA MAS DIVERTIDA, QUIERO MAS MOVIMIENTO.
-
-
-  -----------------------------------
-  NAHUEL AUN DEBE RECOLECTAR LAS FOTOS DE CALIDAD Y LOGOS PARA AGREGAR EN SECCIONES "SERVICIOS" Y "NUESTROS TRABAJOS"
-
-  ----------------------------------
-  falta: 
-  ajustar la velocidad de los numeros
-  ajustar la altura del video para que sea responsive (esta en el style q hay q pasar al .css)
-  boton de whatsapp en la esquina
-  animacion
-
--->
-
-
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -85,29 +50,32 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
   </nav>
 
   <!-- HERO -->
+  <div class="video-container">
+    <video src="../IMG/videorealentizado.mp4" autoplay loop muted poster="">
+    </video>
+  </div>
   <header class="hero d-flex align-items-center">
-    <div class="video-container">
-      <video src="../IMG/videorealentizado.mp4" autoplay loop muted poster="">
-      </video>
+    <div class="container img-fluid">
+      <img src="../IMG/logo_white.png" alt="Logo Técnica" class="hero-logo mb-3">
     </div>
     <div class="container text-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-8" style="width: 100% !important;">
-            <!--<img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">-->
-            <h1 id="text" class="display-5 fw-bold fancy-text">Técnica Gráfica</h1>
-            <p class="lead mb-4">Diseñamos letreros que hablan por vos</p>
-            <div class="d-flex gap-3 justify-content-center">
-              <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
-              <a href="#contacto" class="btn btn-outline-light btn-lg rounded-pill px-4">Contacto</a>
-            </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" style="width: 100% !important;">
+          <!--<img src="assets/img/logo-blanco.svg" alt="Técnica" height="64" class="mb-3">-->
+          <h1 id="text" class="display-5 fw-bold fancy-text">Técnica Gráfica</h1>
+          <p class="lead mb-4" style="font-size: 1.5rem;">Diseñamos letreros que hablan por vos</p>
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="#quienes" class="btn btn-light btn-lg rounded-pill px-4">Ver más</a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg rounded-pill px-4">Contacto</a>
           </div>
         </div>
       </div>
-    </header>
-
+    </div>
+  </header>
+  
   <!-- MÉTRICAS -->
   <section class="metrics bg-marmol">
-    <div class="container text-center">
+    <div class="container text-center metrics-container">
       <h2 class="h3 mb-4 text-muted">Dejemos que los números hablen…</h2>
       <div class="row g-4">
         <div class="col-md-4">
@@ -175,7 +143,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/corporeos.jpg" class="card-img-top" alt="Servicio 1" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Corpóreos</h3>
               <p class="mb-0">Letras o logotipos en relieve fabricados en materiales como acrílico o metal, ideales para destacar la identidad visual.</p>
             </div>
@@ -184,7 +152,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/marquesina.jpg" class="card-img-top" alt="Servicio 2" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Marquesina</h3>
               <p class="mb-0">Cartel ubicado sobre la entrada de un local o negocio, generalmente iluminado, que identifica y da visibilidad al comercio.</p>
             </div>
@@ -193,7 +161,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ploter.jpg" class="card-img-top" alt="Servicio 3" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Ploter</h3>
               <p class="mb-0">Impresiones de gran formato utilizadas para vinilos, carteles o decoración, con alta precisión y calidad de color.</p>
             </div>
@@ -202,7 +170,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ploteovehicular.jpg" class="card-img-top" alt="Servicio 4" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Ploteo Vehicular</h3>
               <p class="mb-0">Vinilos personalizados aplicados sobre autos o camionetas para convertirlos en soporte publicitario.</p>
             </div>
@@ -211,7 +179,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/frontlight.jpg" class="card-img-top" alt="Servicio 5" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Cartelería Frontlight</h3>
               <p class="mb-0">Carteles iluminados desde el frente con reflectores, ideales para exteriores y buena visibilidad nocturna.</p>
             </div>
@@ -220,7 +188,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/backlight.jpg" class="card-img-top" alt="Servicio 6" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Cartelería Backlight</h3>
               <p class="mb-0">Carteles con iluminación interna que resalta los colores y detalles, perfectos para interiores o marquesinas.</p>
             </div>
@@ -229,7 +197,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/neon.jpg" class="card-img-top" alt="Servicio 7" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Carteles en neón</h3>
               <p class="mb-0">Tubos luminosos o luces LED que forman letras o figuras, usados para dar estilo y visibilidad al local.</p>
             </div>
@@ -238,7 +206,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/señalizacion.jpg" class="card-img-top" alt="Servicio 8" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Señalización</h3>
               <p class="mb-0">Carteles o gráficos que orientan, informan o advierten dentro de empresas, locales o espacios públicos.</p>
             </div>
@@ -247,7 +215,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
         <div class="col-md-4">
           <div class="card border-0 shadow-sm h-100 rounded-4 fade-up">
             <img src="../IMG/servicios/ruta.jpg" class="card-img-top" alt="Servicio 9" height="220">
-            <div class="card-body">
+            <div class="card-bodys">
               <h3 class="h5">Cartelería en ruta</h3>
               <p class="mb-0">Carteles de gran tamaño instalados en rutas o autopistas para aumentar la exposición.</p>
             </div>
@@ -303,7 +271,7 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
       <h2 class="h3 text-center mb-4">Negocios con los que trabajamos</h2>
       <div id="carouselBrands" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
-          <div class="carousel-item active">
+          <div class="carousel-item active " data-bs-interval="1000">
             <div class="d-flex justify-content-center gap-4 align-items-center">
               <!-- reemplazar por png/svg reales -->
               <img src="../IMG/logos_editados/logo_abraham.png" class="brand-logo" alt="Marca 1">
@@ -407,6 +375,14 @@ POR OTRO LADO. FALTA AGREGAR DINAMISMO Y ANIMACION.
           <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="8" aria-label="Slide 9"></button>
           <button type="button" data-bs-target="#carouselBrands" data-bs-slide-to="9" aria-label="Slide 10"></button>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBrands" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBrands" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>     
       </div>
     </div>
   </section>
