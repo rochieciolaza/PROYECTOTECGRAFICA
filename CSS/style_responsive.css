@@ -859,6 +859,13 @@ body.no-scroll { overflow: hidden; }
     height: 95vh; /* un poco menos para evitar solapamiento */
   }
 }
+
+@media (min-height:1000px){
+  .hero{
+    padding-top: 10%;
+  }
+}
+
 /* ===== Ajuste del contenido interno del hero ===== */
 .hero {
   display: flex !important;
@@ -884,4 +891,3 @@ body.no-scroll { overflow: hidden; }
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
