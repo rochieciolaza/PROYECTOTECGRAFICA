@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cantidad de logos por slide según ancho
     let perSlide = 5;
     const width = window.innerWidth;
-    if (width < 576) perSlide = 4; // ← antes era 2, ahora 4 logos en pantallas chicas
-    else if (width < 992) perSlide = 3;
+    if (width < 431) 
+      perSlide = 4; // ← antes era 2, ahora 4 logos en pantallas chicas
+    else if (width < 992) 
+      perSlide = 3;
 
     // Agrupar logos
     const numSlides = Math.ceil(allLogos.length / perSlide);
@@ -24,8 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.setAttribute("data-bs-interval", "2000"); // ← intervalo de 1s
 
       const group = document.createElement("div");
-      group.className =
-        "d-flex justify-content-center gap-4 align-items-center flex-wrap";
+      if (width < 431)
+        group.className ="d-flex justify-content-center gap-4 align-items-center flex-wrap";
+      else
+        group.className ="d-flex justify-content-center gap-4 align-items-center";
+
 
       // Tomar los logos del grupo
       allLogos
