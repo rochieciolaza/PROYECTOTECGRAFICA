@@ -60,3 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", rebuildCarousel); // Reconstruye al cambiar tamaño
 });
 
+
