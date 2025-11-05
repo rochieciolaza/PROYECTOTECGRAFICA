@@ -914,7 +914,7 @@ body.no-scroll { overflow: hidden; }
     flex-wrap: wrap;            /* permite el salto */
     justify-content: center;    /* centra todo el texto */
     text-align: center;
-    font-size: 10vw;            /* tamaño adaptable */
+    font-size: 8vw;            /* tamaño adaptable */
     line-height: 1.1;
   }
 
